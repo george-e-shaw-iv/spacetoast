@@ -1,0 +1,72 @@
+/*
+	All programming, markup, styling, and graphics of "The Adventures of Space Toaster" were completed by:
+	
+	George E. Shaw IV // george.e.shaw.iv@outlook.com // Completed on May 5, 2017
+	Download (zip): https://drive.google.com/open?id=0B6Gu69KoAdUhRUxXSU9JNUlGZm8
+	Developer Log: https://drive.google.com/open?id=18tFs7-pxCQT4uEvEK4r8bhC-qDC97KUuarzVGSiJsyU
+*/
+
+body {
+	background:#333333;
+}
+
+h4, td, th {
+	font-family:"Arial", sans-serif;
+	color:#ffffff;
+}
+
+#mainDisplay {
+	border:1px solid #7a35d8;
+	margin:20px;
+}
+
+#title {
+	margin:5px;
+	margin-bottom:0px;
+}
+
+table {
+	border-collapse:collapse;
+}
+
+table, th, td {
+	border:3px solid #000000;
+}
+
+table > tbody > tr > td {
+	padding:5px;
+}
+
+#tileset > tbody > tr > td { background-color:#FFFFFF; }
+
+img {
+	object-fit:none;
+	object-position:0px 0px;
+	width:50px;
+	height:50px;
+}
+
+.configTable > tbody > tr > td, .configTable > tbody > tr > th { background-color:#676767; }
+.configTable > thead > tr > th { background-color:#454545; }
+
+.selected {
+	background-color:#00FF00 !important;
+}
+
+.zero { object-position:0px 0px; }
+.one { object-position:-50px 0px; }
+.two { object-position:-100px 0px; }
+
+.three { object-position:0px -50px; }
+.four { object-position:-50px -50px; }
+.five { object-position:-100px -50px; }
+
+.six { object-position:0px -100px; }
+.seven { object-position:-50px -100px; }
+.eight { object-position:-100px -100px; }
+
+.nine { object-position:0px -150px; }
+.ten { object-position:-50px -150px; }
+.eleven { object-position:-100px -150px; }
+
+.twelve { object-position:0px -200px; }

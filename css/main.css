@@ -1,0 +1,93 @@
+/*
+	All programming, markup, styling, and graphics of "The Adventures of Space Toaster" were completed by:
+	
+	George E. Shaw IV // george.e.shaw.iv@outlook.com // Completed on May 5, 2017
+	Developer Log: https://drive.google.com/open?id=18tFs7-pxCQT4uEvEK4r8bhC-qDC97KUuarzVGSiJsyU
+*/
+
+body {
+	background:#333333;
+}
+
+#wrapper {
+	width:800px;
+	height:auto;
+	margin:0px auto;
+}
+
+#developerInfo {
+	font-family:sans-serif;
+	color:#ffffff;
+	opacity:.6;
+}
+
+#small_text {
+	font-size:8pt;
+	color:inherit;
+}
+
+a { color:inherit; }
+
+/* SURROUNDING CANVAS GFX START */
+/* Top Piece */
+#top { clear:both; }
+
+/* Middle Piece */
+#middle { clear:both; }
+#left { float:left; }
+#mainDisplay {
+	float:left;
+	border:1px solid #7a35d8;
+}
+#right { float:left; }
+
+/* Bottom Piece */
+#bottom { clear:both; }
+/* SURROUNDING CANVAS GFX END */
+
+.gameOverlayScreen {
+	float:left;
+	border:1px solid #7a35d8;
+	background-color:#927a9e;
+	width:550px;
+	height:400px;
+}
+
+.buttonContainer {
+	width:160px;
+	margin:auto; !important
+}
+
+.menuButton {
+	width:160px;
+	height:50px;
+	border:3px solid #432b4f;
+	background-color:#6c4c7d;
+	color:#ffffff;
+	font-family:sans-serif;
+	font-weight:800;
+	font-size:14pt;
+	
+	cursor:pointer;	
+	margin:10px;
+	float:left;
+	clear:left;
+	
+	transition:all .5s;
+	-webkit-transition:all .5s;
+	-moz-transition:all .5s;
+	-o-transition:all .5s;
+}
+
+.menuButton:nth-child(odd) {
+	border-radius:40px 10px;
+}
+
+.menuButton:nth-child(even) {
+	border-radius:10px 40px;
+}
+
+.menuButton:hover {
+	background-color:#ffffff;
+	color:#6c4c7d;
+}

@@ -1,0 +1,139 @@
+<!--
+	All programming, markup, styling, and graphics of "The Adventures of Space Toaster" were completed by:
+	
+	George E. Shaw IV // george.e.shaw.iv@outlook.com // Completed on May 5, 2017
+	Download (zip): https://drive.google.com/open?id=0B6Gu69KoAdUhRUxXSU9JNUlGZm8
+	Developer Log: https://drive.google.com/open?id=18tFs7-pxCQT4uEvEK4r8bhC-qDC97KUuarzVGSiJsyU
+-->
+
+<html lang="en">
+	<head>
+		<title>Space Toaster Level Editor</title>
+		
+		<meta charset="UTF-8"></meta>
+		<link type="text/css" rel="stylesheet" href="css/main.css" />
+		<link rel="icon" type="image/png" href="../../gfx/favicon.png" />
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="libs/globals.js"></script>
+		<script type="text/javascript" src="libs/GraphicsLoader.js"></script>
+		<script type="text/javascript" src="../../libs/Sprite.js"></script>
+		<script type="text/javascript" src="libs/MapEditor.js"></script>
+		<script type="text/javascript" src="libs/TileDisplay.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</head>
+	<body>
+		<center>
+			<h4 id="title">Space Toaster Level Editor</h4>
+			<canvas id="mainDisplay"></canvas>
+			
+			<table id="tileset" border="0">
+				<tbody>
+					<tr>
+						<td class="selected"><img class="zero" src="../../gfx/space_tileset.png" /></td>
+						<td><img class="one" src="../../gfx/space_tileset.png" /></td>
+						<td><img class="two" src="../../gfx/space_tileset.png" /></td>
+						<td><img class="three" src="../../gfx/space_tileset.png" /></td>
+						<td><img class="four" src="../../gfx/space_tileset.png" /></td>
+						<td><img class="five" src="../../gfx/space_tileset.png" /></td>
+						<td><img class="six" src="../../gfx/space_tileset.png" /></td>
+						<td><img class="seven" src="../../gfx/space_tileset.png" /></td>
+						<td><img class="eight" src="../../gfx/space_tileset.png" /></td>
+					</tr>
+					<tr>
+						<td><img class="nine" src="../../gfx/space_tileset.png" /></td>
+						<td><img class="ten" src="../../gfx/space_tileset.png" /></td>
+						<td><img class="eleven" src="../../gfx/space_tileset.png" /></td>
+						<td><img class="twelve" src="../../gfx/space_tileset.png" /></td>
+						<td><img class="empty" src="../../gfx/empty_map_tile.jpg" /></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<br />
+			
+			<table class="configTable" border="0">
+				<thead>
+					<tr>
+						<th colspan="4">Spawner Config</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th colspan="2">General Spawner Config</th>
+						<th colspan="2">Enemy Config</th>
+					</tr>
+					<tr>
+						<td>Health:</td>
+						<td><input id="spawnHealth" type="text" value="10"></input></td>
+						<td>Type:</td>
+						<td>
+							<select id="enemyType">
+								<option value="EvilWaffle" selected>Evil Waffle</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Interval (secs):</td>
+						<td><input id="spawnInterval" type="text" value="5"></input></td>
+						<td>Speed:</td>
+						<td><input id="enemySpeed" type="text" value="2"></input></td>
+					</tr>
+					<tr>
+						<td colspan="2" rowspan="3"></td>
+						<td>Health:</td>
+						<td><input id="enemyHealth" type="text" value="4"></input></td>
+					</tr>
+					<tr>
+						<td>Damage:</td>
+						<td><input id="enemyDamage" type="text" value="2"></input></td>
+					</tr>
+					<tr>
+						<td>Follow Distance:</td>
+						<td><input id="enemyFollow" type="text" value="0"></input></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<br />
+			
+			<table class="configTable" border="0">
+				<thead>
+					<tr>
+						<th colspan="4">Chest Config</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th colspan="2">Ammo Chest</th>
+						<th colspan="2">Health Chest</th>
+					</tr>
+					<tr>
+						<td>Ammo Amount:</td>
+						<td><input id="ammoChestAmount" type="text" value="10"></input></td>
+						<td>Heal Amount:</td>
+						<td><input id="healthChestAmount" type="text" value="5"></input></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<br />
+			
+			<table class="configTable" border="0">
+				<thead>
+					<tr>
+						<th colspan="4">Map Data</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="4"><textarea id="rawMapData" readonly="readonly" cols="65" rows="5"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="4"><button id="clearMap">Clear Map</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</center>
+	</body>
+</html>

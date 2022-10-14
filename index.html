@@ -1,0 +1,108 @@
+<!--
+	All programming, markup, styling, and graphics of "The Adventures of Space Toaster" were completed by:
+	
+	George E. Shaw IV // george.e.shaw.iv@outlook.com // Completed on May 5, 2017
+	Developer Log: https://drive.google.com/open?id=18tFs7-pxCQT4uEvEK4r8bhC-qDC97KUuarzVGSiJsyU
+-->
+
+<html lang="en">
+	<head>
+		<title>The Adventures of Space Toaster</title>
+		
+		<meta charset="UTF-8"></meta>
+		<link type="text/css" rel="stylesheet" href="css/main.css" />
+		<link rel="icon" type="image/png" href="gfx/favicon.png" />
+		
+		<!-- General JS Files/Classes -->
+		<script src="libs/globals.js" type="text/javascript"></script>
+		<script src="libs/Sprite.js" type="text/javascript"></script>
+		<script src="libs/GraphicsLoader.js" type="text/javascript"></script>
+		<script src="libs/Collision.js" type="text/javascript"></script>
+		
+		<!-- Player and Related Classes -->
+		<script src="libs/Player.js" type="text/javascript"></script>
+		<script src="libs/Projectile.js" type="text/javascript"></script>
+		
+		<!-- Actor Class and Children -->
+		<script src="libs/Actor/Actor.js" type="text/javascript"></script>
+		<script src="libs/Actor/EvilWaffle.js" type="text/javascript"></script>
+		
+		<!-- TileEngine Class and Tile Class along with Children -->
+		<script src="libs/TileEngine/Tile.js" type="text/javascript"></script>
+		<script src="libs/TileEngine/AmmoChestTile.js" type="text/javascript"></script>
+		<script src="libs/TileEngine/RocketTile.js" type="text/javascript"></script>
+		<script src="libs/TileEngine/HealthChestTile.js" type="text/javascript"></script>
+		<script src="libs/TileEngine/SpawnerTile.js" type="text/javascript"></script>
+		<script src="libs/TileEngine/TileEngine.js" type="text/javascript"></script>
+		
+		<!-- GameEngine Class and Main -->
+		<script src="libs/GameEngine.js" type="text/javascript"></script>
+		<script src="main.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<img id="top" src="gfx/web_design/web_top.jpg"></img>
+			
+			<div id="middle">
+				<img id="left" src="gfx/web_design/web_left.jpg"></img>
+				
+				<!-- Splash Screen Start -->
+				<div style="display:inline;" class="gameOverlayScreen" id="splashScreen">
+					<img src="gfx/splash_screen.jpg"></img>
+					
+					<div class="buttonContainer">
+						<input type="button" value="START GAME" id="startButton" class="menuButton"></input>
+					</div>
+				</div>
+				<!-- Splash Screen End -->
+				
+				<!-- Pause Screen Start -->
+				<div id="pauseScreen" class="gameOverlayScreen" style="display:none">
+					<img src="gfx/pause_menu.jpg"></img>
+				
+					<div class="buttonContainer">
+						<input type="button" value="RETURN" id="returnToGameButton" class="menuButton"></input>
+						<input type="button" value="MAIN MENU" class="menuButton returnToMainMenuButton"></input>
+					</div>
+				</div>
+				<!-- Pause Screen End -->
+				
+				<!-- Game Over Screen Start -->
+				<div id="gameOverScreen" class="gameOverlayScreen" style="display:none">
+					<img src="gfx/losing_screen.jpg"></img>
+				
+					<div class="buttonContainer">
+						<input type="button" value="MAIN MENU" class="menuButton returnToMainMenuButton"></input>
+					</div>
+				</div>
+				<!-- Game Over Screen End -->
+				
+				<!-- Winning Screen Start -->
+				<div id="winScreen" class="gameOverlayScreen" style="display:none">
+					<img src="gfx/winning_screen.jpg"></img>
+					
+					<div class="buttonContainer">
+						<input type="button" value="MAIN MENU" class="menuButton returnToMainMenuButton"></input>
+					</div>
+				</div>
+				<!-- Winning Screen End -->
+				
+				<canvas style="display:none;" id="mainDisplay"></canvas><!-- Game Canvas -->
+				
+				<img id="right" src="gfx/web_design/web_right.jpg"></img>
+			</div>
+			
+			<img id="bottom" src="gfx/web_design/web_bottom.jpg"></img>
+			
+			<center>
+				<p id="developerInfo">
+					<i>Developed by George E. Shaw IV at Goddard High School in 2017</i> <br />
+					<span id="small_text">
+						<a href="archive/space_toaster_archive_05_04_17.zip">[Download Source Code]</a> //
+						<a target="_blank" href="https://docs.google.com/document/d/18tFs7-pxCQT4uEvEK4r8bhC-qDC97KUuarzVGSiJsyU/edit?usp=sharing">[Developer Log]</a>
+					</span>
+				</p>
+			</center>
+		</div>
+	</body>
+</html>
